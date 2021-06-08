@@ -1,0 +1,154 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Poppins, sans-serif;
+}
+.presentation_text {
+  text-align: center;
+  color: grey;
+}
+
+.presentation_text:nth-child(1) {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.first_title {
+  font-weight: 200;
+}
+.presentation_text :nth-child(2) {
+  color: hsl(234, 12%, 34%);
+  font-size: 25px;
+  font-weight: 600;
+  display: inline;
+}
+.presentation_text :nth-child(3),
+.presentation_text :nth-child(4) {
+  font-size: 12px;
+}
+.presentation_text :nth-child(4) {
+  margin-bottom: 15%;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 28%);
+  grid-template-rows: repeat(3, 55%);
+  gap: 3%;
+  justify-content: center;
+  align-content: center;
+  margin-top: 8%;
+}
+.cards .title {
+  margin: 7% 0% 0% 7%;
+}
+.cards .paragraph {
+  margin: 3% 0% 20% 7%;
+  color: grey;
+}
+.cards img {
+  width: 10%;
+}
+.image_supervisor,
+.image_calculator {
+  position: absolute;
+  left: 80%;
+  top: 70%;
+}
+.image_karma,
+.image_team_builder {
+  position: absolute;
+  top: 67%;
+  left: 80%;
+}
+
+.team_builder {
+  position: relative;
+  grid-column: 2/3;
+  box-shadow: 0px 10px 5px 5px grey;
+  border-top: 5px solid hsl(0, 78%, 62%);
+  height: 100%;
+}
+.supervisor {
+  position: relative;
+  grid-row: 1/3;
+  border-top: 7px solid hsl(180, 62%, 55%);
+  align-self: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 10px 5px 5px grey;
+  margin-bottom: 20%;
+  height: 50%;
+}
+.calculator {
+  position: relative;
+  grid-row: 1/3;
+  align-self: center;
+  border-top: 5px solid hsl(212, 86%, 64%);
+  box-shadow: 5px 10px 5px 5px grey;
+  margin-bottom: 20%;
+  height: 50%;
+}
+.karma {
+  position: relative;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  box-shadow: 0px 10px 5px 5px grey;
+  border-top: 5px solid hsl(34, 97%, 64%);
+  height: 100%;
+  margin-top: 8%;
+}
+
+/* Medias Queries */
+@media screen and (max-width: 900px) {
+  .cards {
+    margin: 0% 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .team_builder,
+  .calculator,
+  .karma,
+  .supervisor {
+    height: 20%;
+    width: 368px;
+  }
+  .presentation_text :nth-child(4) {
+    margin-bottom: 5%;
+  }
+  .supervisor {
+    margin-bottom: 5%;
+  }
+  .karma {
+    margin-bottom: 5%;
+    justify-self: self-start;
+  }
+  .calculator {
+    margin-bottom: 20%;
+  }
+}
+@media screen and (max-width: 445px) {
+  .presentation_text :nth-child(3),
+  .presentation_text :nth-child(4) {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 385px) {
+  .team_builder,
+  .calculator,
+  .karma,
+  .supervisor {
+    height: 20%;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 385px) {
+  .presentation_text .first_title {
+    font-size: 25px;
+  }
+}
